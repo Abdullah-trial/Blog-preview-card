@@ -9,9 +9,9 @@
 }
 
 @font-face {
-    font-family: "Figtree";
-    src: url(./fonts/Figtree-VariableFont_wght.ttf);
-    font-weight: 500 800;
+  font-family: "Figtree";
+  src: url(./fonts/Figtree-VariableFont_wght.ttf);
+  font-weight: 500 800;
 }
 
 * {
@@ -24,7 +24,7 @@ body {
   font-family: "Figtree", sans-serif;
   background-color: var(--bg-color-yellow);
   height: 100vh;
-  width: var(--desktop-view-size);
+  max-width: var(--desktop-view-size);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,56 +33,77 @@ body {
 }
 
 .card {
-    background-color: var(--color-white);
-    width: 390px;
-    height: 550px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 10px 10px;
+  background-color: var(--color-white);
+  width: 390px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 10px 10px;
 }
 
-.blog-image{
-    width: 350px;
-    border-radius: 10px;
+.blog-image {
+  width: 350px;
+  border-radius: 10px;
 }
 .title {
-    background-color: var(--bg-color-yellow);
-    width: 80px;
-    padding: 5px;
-    text-align: center;
-    color: var(--color-gray-dark);
-    font-weight: 800;
+  background-color: var(--bg-color-yellow);
+  width: 80px;
+  padding: 5px;
+  text-align: center;
+  color: var(--color-gray-dark);
+  font-weight: 800;
 }
-.publish-info{
-    font-weight: 650;
+.publish-info {
+  font-weight: 650;
 }
-.heading{
-    font-weight: 800;
-    width: 200;
-    font-size: 25px;
+.heading {
+  font-weight: 800;
+  width: 200;
+  font-size: 25px;
 }
-.heading:hover{
-    color: var(--bg-color-yellow);
-    cursor: pointer;
+.heading:hover {
+  color: var(--bg-color-yellow);
+  cursor: pointer;
 }
-.blog-info{
-    color: var(--color-gray-light);
-    width: 320px;
-    line-height: 1.5;
+.blog-info {
+  color: var(--color-gray-light);
+  width: 320px;
+  line-height: 1.5;
 }
 
-.creator{
-    display: flex;
-    align-items: center;
+.creator {
+  display: flex;
+  align-items: center;
 }
-.creator-img{
-    width: 50px;
-    height: 50px;
+.creator-img {
+  width: 50px;
+  height: 50px;
 }
 span {
-    font-weight: 800;
-    margin-left: 10px;
+  font-weight: 800;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    height: 100vh;
+    max-width: var(--mobile-view-size);
+  }
+  .card {
+    width: 350px;
+    height: 550px;
+    box-shadow: 5px 5px;
+  }
+  .blog-image {
+    width: 310px;
+  }
+  .blog-info {
+    font-size: 15px;
+  }
+  .heading {
+    font-size: 22px;
+  }
 }
